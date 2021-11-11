@@ -1,0 +1,15 @@
+.vc_el-container .vc_extend_newsletter_icon, .vc_extend_newsletter_icon,
+.vc_el-container .vc_extend_vertical_tabs_icon, .vc_extend_vertical_tabs_icon,
+.vc_el-container .vc_extend_testimonials_icon, .vc_extend_testimonials_icon,
+.vc_el-container .vc_extend_twitter_scroller_icon, .vc_extend_twitter_scroller_icon,
+.vc_el-container .vc_extend_partners_icon, .vc_extend_partners_icon,
+.vc_el-container .vc_extend_team_icon, .vc_extend_team_icon{
+	background-image: url(upper-sprite.png) !important;
+}
+
+.vc_el-container .vc_extend_newsletter_icon, .vc_extend_newsletter_icon				{background-position: 0px -66px !important;}
+.vc_el-container .vc_extend_vertical_tabs_icon, .vc_extend_vertical_tabs_icon		{background-position: 0px 0px !important;}
+.vc_el-container .vc_extend_testimonials_icon, .vc_extend_testimonials_icon			{background-position: 0px -99px !important;}
+.vc_el-container .vc_extend_twitter_scroller_icon, .vc_extend_twitter_scroller_icon {background-position: 0px -33px !important;}
+.vc_el-container .vc_extend_partners_icon, .vc_extend_partners_icon					{background-position: 0px -132px !important;}
+.vc_el-container .vc_extend_team_icon, .vc_extend_team_icon							{background-position: 0px -165px !important;}

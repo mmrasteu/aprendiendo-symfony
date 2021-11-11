@@ -1,0 +1,1 @@
+!function(a,b,c,d){"use strict";var e=a(".cbp-slider");e.length?(e.find(".cbp-slider-item").addClass("cbp-item"),e.cubeportfolio({layoutMode:"slider",mediaQueries:[{width:1,cols:1}],gapHorizontal:0,gapVertical:0,caption:"",coverRatio:""})):a("<div/>").cubeportfolio()}(jQuery,window,document);

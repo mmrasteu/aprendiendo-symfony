@@ -1,0 +1,74 @@
+.vc_ui-panel, 
+#vc_ui-panel-add-element{display: none;} /* hide on load, looks awful */
+#wpb_visual_composer{ display: none !important; } /* we mean business, son. */
+
+/* small adjustments to new wp look */
+.option-container .thumb_slides_container_audio audio{border:none !important;top: 35px;}
+
+div[data-type="upper/upper-wpb-element"] .editor-block-list__block-edit:not(.upper-editable-shortcode-block) { max-height: 100px;overflow: hidden; }
+body.upper-blocks-ready div[data-type="upper/upper-wpb-element"], #vc_ui-panel-add-element.upper_temp_allow, .vc_active.upper_temp_allow{display: block;}
+body:not(.upper-blocks-ready) p.wp-block-upper-upper-wpb-element{max-height: 100px;overflow: hidden;text-indent: 200vw;}
+
+/* make it look better on loads and updates and stuff. */
+div[data-type="upper/upper-wpb-element"] .editor-block-list__block-edit div[data-block]:not(.upper-shortcode-ready) p.wp-block-upper-upper-wpb-element:before{content: " ";position:absolute;top:0;right:0;bottom: 0;left:0;background: #FFF;}
+div[data-type="upper/upper-wpb-element"] .editor-block-list__block-edit div[data-block]:not(.upper-shortcode-ready) p.wp-block-upper-upper-wpb-element:after{content:" ";position:absolute;top:0;right:0;bottom:0;left:0; background: #0000 url(../../../js_composer/assets/vc/loaders/spinner.svg) center center no-repeat !important;background-size:cover;position:absolute;left:50%;top:50%;-webkit-transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%);transform:translate(-50%,-50%);-webkit-animation:vc_ui-wp-spinner-animation 1.08s linear infinite;animation:vc_ui-wp-spinner-animation 1.08s linear infinite;zoom: .65;min-height: 50px;}
+
+.wpb_element_wrapper{float: left;}
+.hidden_bc_of_vc_description{color:#999;font-size: .7em !important;overflow:hidden;text-overflow: ellipsis;display: -webkit-box !important;-webkit-box-orient: vertical;-webkit-line-clamp: 2; line-height: 1.7em;max-height: 3.4em;}
+.wpb_element_title{float: left;margin-bottom:10px;}
+.wpb_element_title i, .no_image_image, .wpb_element_wrapper .attachment-thumbnail{float: left;margin-right: 10px !important;}
+.wpb_element_wrapper .attachment-thumbnail{clear: left;}
+.wpb_element_wrapper > *:not(.wpb_element_title):not(.vc_toggle_title):not(.vc_message_box-icon){margin-top: 1em !important;display: inline-block;margin-left: 10px;line-height: 20px;}
+p.wp-block-upper-upper-wpb-element{display: block;width: 100%;}
+span.vc_admin_label{float: left;padding-top:16px;line-height: 20px;}
+.editor-block-list__block-edit div.wpb_element_wrapper > div.wpb_vc_param_value[name="content"] {margin-top: 0px !important;}
+textarea.wpb-textarea{height:200px;} /* initial value. user can still resize it. */
+/* attachment-thumnails */
+ul.attachment-thumbnails{float:left;clear: left;}
+ul.attachment-thumbnails li{list-style:none;width:30px;float:left;padding-right: 2px;padding-top:5px;}
+
+/*
+
+ELEMENTS SPECIFICS / ADJUSTMENTS
+
+*/
+
+/* ICON  */
+span.vc_admin_label i{line-height: 20px;}
+span.vc_admin_label i.vc-mono:before{line-height: 0px;}
+
+/* MESSAGE BOX */
+.vc_message_box .vc_message_box-icon, .vc_message_box .messagebox_text{margin-left:0px !important;float:left !important;}
+.vc_message_box .vc_message_box-icon{margin-top: 0px !important;-webkit-transform: translateY(-0.7em);}
+.vc_message_box .messagebox_text{padding-left: 4em;position:relative !important;}
+
+/* FAQ - TOGGLE */
+.vc_toggle_content{display: none !important;}
+.vc_toggle_title{margin: 0 !important; background: url(../../../js_composer/assets/vc/plus.png) left .5em no-repeat;padding-left: 20px!important;}
+
+/* elements inside columns */
+.editor-inner-blocks .upper-editable-shortcode-block .wpb_element_wrapper > *:not(.wpb_element_title):not(.content):not(.attachment-thumbnails):not(.vc_btn3-container):not(.title):not(.vc_message_box-icon):not(.messagebox_text){display:none !important;}
+.editor-inner-blocks .upper-editable-shortcode-block .wpb_element_wrapper .wpb_element_title{margin-top:1em;}
+.editor-inner-blocks .upper-editable-shortcode-block .wpb_element_wrapper .attachment-thumbnails{margin-top: 5px !important;margin-left: 0px !important;margin-bottom: 5px;}
+.editor-inner-blocks .upper-editable-shortcode-block .wpb_element_wrapper .attachment-thumbnails li{margin-bottom: 0px !important;padding-top: 0px;}
+.editor-inner-blocks .upper-editable-shortcode-block .wpb_element_wrapper > .vc_btn3-container{margin-top: .5em !important;}
+
+/* 
+	PREVIEW WINDOW ADJUSTMENTS
+*/
+.editor-block-preview__content .editor-block-list__block{float:none;padding-left:0 !important;margin-left:0 !important;display:inline-block !important;max-width:100% !important;position:relative;}
+.editor-block-preview__content .wp-block-columns .editor-block-list__layout{ padding: 0 0 0 .2em !important; }
+.editor-block-preview__content .wp-block-columns .editor-block-list__layout >*:last-child{ padding: 0 !important; }
+.editor-block-preview__content .wp-block-columns .editor-block-list__layout .editor-block-list__block{padding-right:1em !important;}
+.editor-block-preview__content .wp-block-columns .editor-block-list__layout .editor-block-list__block:last-child{padding-right:0 !important;}
+
+
+/*
+	
+	NON USABLE SHORTCODES
+	
+	STATUS: at the moment the real issue is nested shortcodes.
+	
+*/
+li[data-element="vc_row"], li[data-element="vc_section"], li[data-element="vc_tta_tabs"], li[data-element="vc_tta_accordion"], li[data-element="vc_tta_tour"], li[data-element="vc_tta_pageable"], li[data-element="verticaltabs"], li[data-element="verticaltab"], li[data-element="ult_animation_block"], li[data-element="info_list"], li[data-element="ultimate_carousel"], li[data-element="ultimate_icon_list"], li[data-element="ultimate_exp_section"], li[data-element="single_tab"], li[data-element="ult_sticky_section"], li[data-element="icon_timeline"], li[data-element="ultimate_icons"], li[data-element="ult_tab_element"], li[data-element="ult_content_box"]{xdisplay:none !important;pointer-events:none !important;}
+li[data-element="vc_row"] a, li[data-element="vc_section"] a, li[data-element="vc_tta_tabs"] a, li[data-element="vc_tta_accordion"] a, li[data-element="vc_tta_tour"] a, li[data-element="vc_tta_pageable"] a, li[data-element="verticaltabs"] a, li[data-element="verticaltab"] a, li[data-element="ult_animation_block"] a, li[data-element="info_list"] a, li[data-element="ultimate_carousel"] a, li[data-element="ultimate_icon_list"] a, li[data-element="ultimate_exp_section"] a, li[data-element="single_tab"] a, li[data-element="ult_sticky_section"] a, li[data-element="icon_timeline"] a, li[data-element="ultimate_icons"] a, li[data-element="ult_tab_element"] a, li[data-element="ult_content_box"] a{opacity: .2 !important;}
