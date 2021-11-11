@@ -29,4 +29,12 @@ class HomeController extends AbstractController
             'apellidos' => $apellidos
         ]);
     }
+
+    public function redirigir(): Response
+    {
+        return $this->redirectToRoute('animales', [
+            'nombre' => 'Juan', 
+            'apellidos' => 'Macande'
+        ]);
+    }
 }
